@@ -1,0 +1,52 @@
+<h1>DashBoard</h1>
+
+
+<div class="col-md-2 col-sm-6 col-xl-2 col-xs-8">
+
+		<fieldset>
+			<legend>Buscar</legend>
+	 	    <%= text_field_tag "container", "", :size => 20, :maxlenght => 10, :placeholder => "Nº Container", :required => "required" %>
+	 	   <%= button_tag("Buscar", id: "buscar" ,class: "btn btn-default")%>
+		</fieldset>
+	</div>
+	
+	
+	<div class="col-md-10 col-sm-6 col-xl-10 col-xs-4">
+		<legend>Detalle</legend>
+		<div id="resultado">
+		
+		</div>
+		<legend>Mapa</legend>
+		<div style='width: 800px;'>
+		  <div id="map" style='width: 800px; height: 400px;'></div>
+		</div>
+		
+	</div>
+</div>
+
+
+
+
+<script>
+
+
+
+
+//Crear Mapa
+
+function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+</script>
+	  
+	  <script async defer
+	     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLWcPfA0iJCNa9tgxmUXaSyfcTcT4x11c&callback=initMap">
+	     </script>

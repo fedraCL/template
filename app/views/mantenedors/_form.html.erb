@@ -1,0 +1,14 @@
+<%= simple_form_for(@mantenedor) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :tipo %>
+    <%= f.input :valor %>
+    <%= f.input :misc %>
+    <%= f.input :codigo %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

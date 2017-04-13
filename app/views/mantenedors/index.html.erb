@@ -1,0 +1,33 @@
+<h1>Códigos de Administración</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Valor</th>
+      <th>Misc</th>
+      <th>Codigo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mantenedors.each do |mantenedor| %>
+      <tr>
+        <td><%= mantenedor.tipo %></td>
+        <td><%= mantenedor.valor %></td>
+        <td><%= mantenedor.misc %></td>
+        <td><%= mantenedor.codigo %></td>
+        <td><%= link_to 'Show', mantenedor %></td>
+        <td><%= link_to 'Edit', edit_mantenedor_path(mantenedor) %></td>
+        <td><%= link_to 'Destroy', mantenedor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mantenedor', new_mantenedor_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @mantenedor.tipo %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @mantenedor.valor %>
+</p>
+
+<p>
+  <strong>Misc:</strong>
+  <%= @mantenedor.misc %>
+</p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @mantenedor.codigo %>
+</p>
+
+<%= link_to 'Edit', edit_mantenedor_path(@mantenedor) %> |
+<%= link_to 'Back', mantenedors_path %>

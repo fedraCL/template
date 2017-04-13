@@ -1,9 +1,12 @@
 Treebook::Application.routes.draw do
+  resources :mantenedors
+
+ 
   get "profiles/show"
   
   resources :statuses
   get "feed", :to => "statuses#index", :as => :feed
-  root to: 'statuses#index'
+  root to: 'home#index'
 
   as :user do
     get "/register", :to => "devise/registrations#new", :as => :register
