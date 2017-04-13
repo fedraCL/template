@@ -1,2 +1,3 @@
-# Treehouse.com's "Create a Simple Rails App"
-## Using Rails 4 + Twitter Bootstrap 3.0
+http://www.fedra.cl
+
+"Template  Simple Rails App with Devise and Bootstrap"
